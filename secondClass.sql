@@ -29,10 +29,18 @@ ALTER TABLE festival MODIFY COLUMN no  bigint; -- bitInt
 ALTER TABLE festival MODIFY COLUMN no varchar(20); -- can convert int to varchar
 
 CREATE TABLE places( no int,place_name varchar(20),famous varchar(30),state varchar(20));
+INSERT INTO places VALUES(1,'DAVANAGERE','BENNE DOSA','KARNATAKA');
+INSERT INTO places VALUES(2,'DAVANAGERE','BENNE DOSA','KARNATAKA');
+INSERT INTO places VALUES(3,'DAVANAGERE','BENNE DOSA','KARNATAKA');
 ALTER TABLE places MODIFY COLUMN state varchar(50);
 ALTER TABLE places DROP no;
 ALTER TABLE places RENAME COLUMN state TO country;
 DESC places;
-RENAME table old_table_name to new_table_name;
-
+RENAME table old_table_name to new_table_name;		
+-- TRUNCATE :DELETE THE DATA BUT TABLE STRUCTURE REMAIN SAME 
+TRUNCATE TABLE table_name;
 DROP TABLE places; 
+DROP TABLE places; 
+SELECT * FROM places;
+use jan7batch;
+SELECT COUNT(fest_name) from places;

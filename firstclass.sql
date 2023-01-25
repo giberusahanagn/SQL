@@ -13,6 +13,7 @@ SELECT :
 INSERT:
 SYNTAX FOR INSERING TABLE
 INSERT INTO table_name VALUES(data1,data2,.........);
+UPDATE table_name SET column_name ='data';
 */
 INSERT INTO river VALUES(1,'kaveri','Talakadu',6000);
 INSERT INTO river VALUES(2,'Tungabadra','shivmogga',2000);
@@ -22,4 +23,4 @@ SELECT count(*) from river;
 -- ALTER : add column to an exisiting table
 -- DROP the column from ------||---------
 -- Rename can change the column name
--- Change the datatype  
+-- Change the datatype  SELECT * FROM cricket where price =34879;

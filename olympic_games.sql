@@ -4,7 +4,7 @@ CREATE TABLE olympic_games(id int,game_type varchar(30),player_name varchar(30),
 no_of_players int,no_of_teams int,no_of_medals int,medals_type varchar(20),jersey_no int,winning_prize_amount int);
 INSERT INTO olympic_games VALUES(1,'indoor','sahana','India',10,2,10,'gold',1,12000); 
 INSERT INTO olympic_games VALUES(2,'indoor','swati','India',12,3,28,'gold',20,3000); 
-INSERT INTO olympic_games VALUES(3,'outdoor','neelu','afganisthan',20,12,31,'silver',11,8000); 
+INSERT INTO olympic_games VALUES(3,'outdoor','neelu','china',20,12,31,'silver',11,8000); 
 INSERT INTO olympic_games VALUES(4,'inooor','vasundara','china',10,23,13,'gold',13,2000); 
 INSERT INTO olympic_games VALUES(5,'outdoor','nayana','nepal',20,21,14,'silver',1,12000); 
 INSERT INTO olympic_games VALUES(6,'indoor','pavitra','russia',25,12,15,'silver',1,42000);
@@ -43,3 +43,8 @@ INSERT INTO olympic_games VALUES(38,'indoor','divya','Poland',19,2,1,'gold',12,2
 INSERT INTO olympic_games VALUES(39,'indoor','jothi','Colombia',22,2,1,'silver',12,23000); 
 INSERT INTO olympic_games VALUES(40,'outdoor','manjula','Portugal',12,2,1,'gold',51,27000); 
 SELECT * FROM olympic_games;
+truncate table olympic_games;
+create table olympics as select * from olympic_games;
+SELECT * FROM olympics;
+ALTER TABLE olympic_games ADD CONSTRAINT pk_id primary key(id);
+ALTER TABLE olympics ADD CONSTRAINT fk_id foreign key(id) references olympic_games(id);

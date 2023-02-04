@@ -1,10 +1,11 @@
 CREATE TABLE mtrProducts(id int,prod_name varchar(30),price int);
 SELECT * FROM mtrProducts;
+use sports;
 INSERT INTO mtrProducts VALUES(1,' karadapudi',100),(2,'sambar',150),(3,'puliyogare  ',200),(4,'rasam',100);
 truncate TABLE mtrProducts;
  LTRIM---> LEFT REMOVE
 SELECT LTRIM('  XWORKZ') as space_remove;
-SELECT LENGTH('XWORKZ') AS LENGTH;
+SELECT LENGTH('XWORKZ   ') AS LENGTH;
  RTRIM--->REMOVE THE TRAILING SPACES FROM DATA
 SELECT id,prod_name,length(prod_name) from mtrproducts;
 SELECT RTRIM('LAPTOP   ') AS trail_space;
@@ -12,14 +13,14 @@ SELECT RTRIM(prod_name) as trail from mtrproducts;
 SELECT LTRIM(rtrim('   SAHANA    '))AS SPACES;
 ORDER BY;
 
-SELECT * from olympic_games order by id;
+SELECT * from olympic_games order by no_of_medals;
 SELECT * from olympic_games order by id DESC;
 
 SELECT country from olympic_games order by country DESC;
 constraints:USE TO RESTRICT THE DATA,NULL VALUES
 USE SOME RULES FROM DATA,USE LIMIT THE TYPE OF DATA;
 
-CREATE TABLE marriage(id int not null,bride_name varchar(40),groom varchar(30) ,pujari varchar(30) not null);
+CREATE TABLE marriage(id int not null ,bride_name varchar(40),groom varchar(30) ,pujari varchar(30) not null);
 INSERT INTO marriage VALUES(1,'atheya','klrahul','hgscs');
 INSERT INTO marriage VALUES(2,'manjula','nagaraj','hgscs');
 INSERT INTO marriage VALUES(1,'atheya','klrahul','hgscs');

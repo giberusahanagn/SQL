@@ -61,3 +61,6 @@ SELECT DISTINCT(age) from football_info;
 SELECT UPPER(name),name from football_info;
 SELECT LOWER(name),name from football_info;
 SELECT CONCAT(name,place) as team from football_info;
+SELECT AVG(salary) as totalSalary from football_info;
+SELECT MIN(age) from football_info;
+SELECT MAX(age) from football_info;

@@ -8,7 +8,7 @@ use jan7batch;
 SELECT * FROM bank_transaction where bankNmae ='sbi';
 SELECT id FROM bank_transaction where id =3;
 SELECT id,bankNmae FROM bank_transaction where bankNmae='sbi';
-
+mountain
 -- ALTER TABLE bank_transaction MODIFY id after bankNmae varchar(20);
 SELECT * FROM bank_transaction where id=4 AND bankNmae='axis'AND  is_active =true;
 SELECT * FROM bank_transaction where id=5 OR bankNmae='icici';
